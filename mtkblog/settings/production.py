@@ -7,6 +7,4 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'www.martintkrebs.com',
     'martintkrebs.com',
-
-    'localhost',  # temp, just for local dev
 ]

@@ -31,14 +31,6 @@ def get_env_variable(var_name):
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
 
-ALLOWED_HOSTS = [
-    'localhost',  # just for local dev
-
-    'www.martintkrebs.com',
-    'martintkrebs.com'
-]
-
-
 # Application definition
 
 INSTALLED_APPS = [
