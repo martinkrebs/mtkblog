@@ -3,8 +3,10 @@
 {% block body %}
 
 {% for post in posts %}
-<h2>{{ post.title }}</h2>
-<p>{{ post.created }}</p>
+<h2>
+    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+</h2>
+<p>Published {{ post.publish }} by {{ post.author }}</p>
 <p>{{ post.summary}}</p>
 <hr>
 {% endfor %}
