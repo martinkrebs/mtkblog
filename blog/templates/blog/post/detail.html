@@ -1,10 +1,24 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 
-{% block body %}
+{% block header %}
+<header class="intro-header" style="background-image: url('{% static 'img/post-bg.jpg' %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ post.title }}</h1>
+                    <h2 class="subheading">{{ post.summary }}</h2>
+                    <span class="meta">Posted by {{ post.author }} {{ post.publish }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
 
-<h2>{{ post.title }}</h2>
+{% block content %}
+
 <p>{{ post.body }}</p>
-
-<a href="{% url 'blog:post_list' %}">list page</a>
 
 {% endblock %}
