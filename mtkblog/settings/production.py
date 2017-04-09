@@ -8,3 +8,5 @@ ALLOWED_HOSTS = [
     'www.martintkrebs.com',
     'martintkrebs.com',
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
