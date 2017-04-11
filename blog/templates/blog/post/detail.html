@@ -1,24 +1,11 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 
-{% block header %}
-<header class="intro-header" style="background-image: url('{% static 'img/post-bg.jpg' %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>{{ post.title }}</h1>
-                    <h2 class="subheading">{{ post.summary }}</h2>
-                    <span class="meta">Posted by {{ post.author }} {{ post.publish }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-{% endblock %}
-
 {% block content %}
-
-<p>{{ post.body|safe }}</p>
-
+<div class="blog-post">
+  <h2 class="blog-post-title">{{ post.title }}</h2>
+  <h4 class="blog-post-summary">{{ post.summary}}</h4>
+  <p class="blog-post-meta">Posted by {{ post.author }} {{ post.publish }}</p>
+  {{ post.body|safe }}
+</div><!-- /.blog-post -->
 {% endblock %}
