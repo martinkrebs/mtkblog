@@ -1,16 +1,16 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title>mtkblog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -19,7 +19,7 @@
     <link href="{% static "css/clean-blog.min.css" %}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}"rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -29,9 +29,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
@@ -41,7 +43,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{% url 'blog:post_list' %}">Martin Krebs</a>
+                <a class="navbar-brand" href="{% url 'blog:post_list' %}">mtkblog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,6 +65,7 @@
         <!-- /.container -->
     </nav>
 
+    <!-- Page Header -->
     {% block header %}{% endblock %}
 
     <!-- Main Content -->
@@ -70,11 +73,21 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% block content %}{% endblock %}
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">Newer Posts &rarr;</a>
+                    </li>
+                    <li class="next">
+                        <a href="#">&larr; Older Posts</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <hr>    
+    <hr>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -106,21 +119,21 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; mtkblog 2017</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+    <!-- Boostrap - Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="{% static "js/jqBootstrapValidation.js" %}"></script>
-    <script src="{% static "js/contact_me.js" %}"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="{% static "js/clean-blog.min.js" %}"></script>
